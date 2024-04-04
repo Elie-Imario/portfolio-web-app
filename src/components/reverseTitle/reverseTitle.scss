@@ -1,0 +1,43 @@
+@import "../../assets/imports/import";
+
+.reverse-Title {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  max-width: 225px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  .textline {
+    transform: rotate(-90deg);
+    @include flex($align: center, $justify: flex-start, $gap: 12px);
+    &::before {
+      content: "";
+      max-width: 25px;
+      width: 100%;
+      border: 0.5px solid $primary;
+    }
+    .content {
+      width: 100%;
+      @include flex($align: center, $justify: flex-start, $gap: 10px);
+      span {
+        &.ico {
+          font-size: 1rem;
+        }
+        font-size: 0.7rem;
+        color: $primary;
+        text-transform: uppercase;
+        @include plusJakartaSansType($weight: 600);
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .reverse-Title > .textline > .content > span {
+    &.ico {
+      font-size: 1.125rem;
+    }
+    font-size: 0.9rem;
+  }
+}

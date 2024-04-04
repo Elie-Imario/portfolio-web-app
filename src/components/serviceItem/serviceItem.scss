@@ -1,0 +1,174 @@
+@import "../../assets/imports/import";
+.service-item {
+  margin: 25px 0;
+  @include flex($align: center, $justify: flex-start, $gap: 21px);
+  width: 100%;
+
+  .serviceName {
+    width: 50%;
+    font-size: 1rem;
+    @include plusJakartaSansType($weight: 500);
+    text-wrap: nowrap;
+    color: $gray-500;
+  }
+  &:nth-of-type(2) {
+    .serviceName {
+      flex-grow: 1;
+      width: 100px;
+      order: 2;
+    }
+    .serviceImg {
+      flex-grow: 10;
+      order: 1;
+    }
+  }
+  &:nth-of-type(3) {
+    .serviceName {
+      flex-grow: 1;
+      min-width: 100px;
+      width: 40%;
+      text-wrap: wrap;
+    }
+    .serviceImg {
+      flex-grow: 5;
+    }
+  }
+  .serviceImg {
+    position: relative;
+    border-radius: 0.125rem;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($color: $black, $alpha: 0.5);
+      z-index: 1;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    &:hover {
+      cursor: pointer;
+      &::before {
+        opacity: 0;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/*
+* Media queries
+*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .service-item {
+    .serviceName {
+      width: 50%;
+      font-size: 1rem;
+      @include plusJakartaSansType($weight: 500);
+      text-wrap: nowrap;
+      color: $gray-500;
+    }
+    .serviceImg {
+      height: 121px;
+    }
+
+    &:nth-of-type(1) {
+      .serviceName {
+        min-width: 100px;
+        flex-grow: 1;
+        width: 60%;
+        text-wrap: wrap;
+      }
+      .serviceImg {
+        flex-grow: 10;
+      }
+    }
+    &:nth-of-type(2) {
+      .serviceName {
+        flex-grow: 1;
+        width: 100px;
+        order: 2;
+      }
+      .serviceImg {
+        flex-grow: 10;
+        order: 1;
+      }
+    }
+    &:nth-of-type(3) {
+      .serviceName {
+        flex-grow: 1;
+        min-width: 100px;
+        width: 40%;
+        text-wrap: wrap;
+      }
+      .serviceImg {
+        flex-grow: 5;
+      }
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .service-item {
+    &:nth-of-type(1) {
+      .serviceName {
+        min-width: 100px;
+        flex-grow: 1;
+        width: 36%;
+        text-wrap: wrap;
+      }
+      .serviceImg {
+        order: 2;
+        flex-grow: 10;
+      }
+    }
+    .serviceImg {
+      height: 121px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .service-item {
+    .serviceName {
+      font-size: 1.25rem;
+    }
+    .serviceImg {
+      height: 144px;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .service-item {
+    .serviceName {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .service-item {
+    .serviceName {
+      font-size: 2rem;
+    }
+    .serviceImg {
+      height: 169px;
+    }
+  }
+}

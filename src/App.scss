@@ -1,0 +1,804 @@
+@import "./assets/imports/import";
+.App {
+  height: 100%;
+  width: 95%;
+  position: relative;
+  margin: 0 auto;
+  .Header-section {
+    .NavBar-app-header {
+      position: fixed;
+      top: 0;
+      width: 95%;
+      padding: 1.25rem 0;
+      z-index: 999;
+    }
+  }
+  .App-block-page {
+    .block-page-fixed-section {
+      position: fixed;
+      height: 100%;
+      margin: 0 auto;
+      top: 0px;
+      right: -49px;
+      z-index: 10;
+      @include flex($align: center, $justify: center);
+      .textline {
+        span {
+          display: block;
+          transform: rotate(-90deg);
+          font-size: 0.65rem;
+          color: $gray-600;
+          text-transform: uppercase;
+          @include plusJakartaSansType($weight: 300);
+        }
+      }
+    }
+    .TracingBeam {
+      z-index: 5;
+    }
+    .section {
+      height: 100%;
+      position: relative;
+      z-index: 12;
+      &.f-height {
+        height: 100vh;
+      }
+      &.mt {
+        margin-top: 91px;
+      }
+      .bloc-limiter {
+        @include flex(
+          $direction: column,
+          $align: center,
+          $justify: center,
+          $flexwrap: nowrap,
+          $gap: 81px
+        );
+        padding: 5% 10%;
+        height: 100%;
+      }
+
+      .bloc-limiter .bloc-container {
+        position: relative;
+        width: 100%;
+      }
+      .bloc-container .bloc-contents .content-header {
+        width: 100%;
+        span {
+          color: $white;
+          font-size: 1.125rem;
+          line-height: 1.75rem;
+          @include plusJakartaSansType($weight: 600);
+        }
+      }
+    }
+    .Hero-section {
+      position: relative;
+      overflow: hidden;
+      .hero-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0 auto;
+        background: $primary;
+        z-index: -1;
+        padding-bottom: 0.5rem;
+        transition: all 0.5s ease-in-out;
+
+        .hero-container-title {
+          height: 100%;
+          width: 100%;
+          @include flex(
+            $direction: column,
+            $align: center,
+            $justify: flex-start,
+            $gap: 15px
+          );
+          .text1 {
+            color: $gray-100;
+            width: 100%;
+          }
+          .text1,
+          .text2 {
+            @include plusJakartaSansType($weight: 600);
+          }
+          .text3 {
+            @include plusJakartaSansType($weight: 400);
+          }
+          .text2,
+          .text3 {
+            color: $richBlack;
+          }
+          .intro {
+            display: none;
+            span {
+              @include plusJakartaSansType($weight: 400);
+              color: $gray-400;
+              &.colored {
+                color: $richBlack;
+                @include plusJakartaSansType($weight: 500);
+              }
+            }
+          }
+        }
+        .hero-container-image {
+          margin: 0 auto;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .About-me-section {
+      & > .bloc-limiter > .bloc-container > .bloc-contents {
+        p {
+          color: $gray-500;
+          font-size: 0.65rem;
+          line-height: 1.5rem;
+          @include plusJakartaSansType($weight: 400);
+        }
+        .content-items {
+          margin-top: 49px;
+          @include flex(
+            $align: center,
+            $justify: center,
+            $flexwrap: wrap,
+            $gap: 35px
+          );
+        }
+      }
+    }
+
+    .Experience-section {
+      & > .bloc-limiter > .bloc-container > .bloc-contents {
+        .content-body {
+          padding-left: 1.5rem;
+          .vertical-timeline {
+            &::before {
+              width: 2px;
+              background: $gray-500;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 18px;
+              width: 2px;
+              background: #002644;
+              animation: fill 5s infinite linear;
+              @keyframes fill {
+                0% {
+                  height: 0;
+                }
+                25% {
+                  height: 50%;
+                }
+                50% {
+                  height: 100%;
+                }
+                75% {
+                  height: 50%;
+                }
+                100% {
+                  height: 0;
+                }
+              }
+            }
+          }
+
+          .vertical-timeline .vertical-timeline-element {
+            & > .entreprise-Logo {
+              overflow: hidden;
+              box-shadow: none !important;
+              padding: 5px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+            .vertical-timeline-element-title {
+              font-size: 0.9rem;
+              @include plusJakartaSansType($weight: 600);
+              text-wrap: wrap;
+              line-height: 1.75rem;
+              .entrepise_name {
+                color: $primary;
+              }
+            }
+            .vertical-timeline-element-subtitle {
+              margin-top: 5px;
+              font-size: 0.65rem;
+              @include plusJakartaSansType($weight: 400);
+              color: $gray-500;
+            }
+            .vertical-timeline-work-description {
+              margin-top: 15px;
+              @include flex(
+                $direction: column,
+                $align: center,
+                $justify: flex-start,
+                $flexwrap: nowrap
+              );
+              .item {
+                margin-top: 5px;
+                font-size: 0.65rem;
+                @include plusJakartaSansType($weight: 500);
+                line-height: 1.5rem;
+                color: $gray-300;
+                position: relative;
+                @include flex(
+                  $align: flex-start,
+                  $justify: flex-start,
+                  $gap: 5px
+                );
+                .li-type {
+                  font-size: 10px;
+                }
+              }
+            }
+            .vertical-timeline-element-date {
+              font-size: 0.65rem;
+              @include plusJakartaSansType($weight: 500);
+              color: $gray-100;
+            }
+          }
+          @media only screen and (min-width: 1170px) {
+            .vertical-timeline.vertical-timeline--two-columns::after {
+              left: 50%;
+              margin-left: -2px;
+            }
+          }
+        }
+      }
+    }
+
+    .Services-section {
+      & > .bloc-limiter > .bloc-container > .bloc-contents {
+        .content-body {
+          width: 100%;
+        }
+      }
+    }
+
+    .Project-Section {
+      & > .bloc-limiter > .bloc-container > .bloc-contents {
+        .content-body {
+          width: 100%;
+          .project-link {
+            margin-top: 15px;
+            float: right;
+            padding: 0.5rem;
+            min-width: 81px;
+            border: 1px solid $primary;
+            border-radius: 0.3rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            &:hover {
+              background: $primary;
+              a {
+                color: $white;
+              }
+            }
+          }
+          .project-link a {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $primary;
+            font-size: 0.7rem;
+            @include plusJakartaSansType($weight: 600);
+          }
+        }
+      }
+    }
+
+    .Footer-Section {
+      & > .bloc-limiter > .bloc-container > .bloc-contents {
+        .footer-intro {
+          span {
+            font-size: 1.125rem;
+            @include plusJakartaSansType($weight: 600);
+            color: $white;
+          }
+        }
+        .footer-body {
+          margin-top: 35px;
+          @include flex($align: center, $justify: center, $flexwrap: nowrap);
+          .left-side {
+            @include flex(
+              $direction: column,
+              $align: flex-start,
+              $justify: space-between,
+              $gap: 25px
+            );
+            div {
+              height: 100%;
+              span {
+                font-size: 0.7rem;
+                line-height: 1.25rem;
+                @include plusJakartaSansType($weight: 400);
+                color: $gray-500;
+              }
+            }
+            .spacer_layer {
+              width: 100%;
+              border-color: $gray-600;
+              border-width: 0.1px;
+              opacity: 0.5;
+            }
+            button {
+              color: $primary;
+              border: 1px solid $primary;
+              text-align: center;
+              width: 100px;
+              padding: 0.75rem;
+              border-radius: 1.5rem;
+              @include plusJakartaSansType($weight: 600);
+              font-size: 0.7rem;
+              cursor: pointer;
+              transition: all 0.5s ease;
+              &:hover {
+                background: $primary;
+                color: $white;
+              }
+            }
+          }
+          .right-side {
+            display: none;
+          }
+        }
+        .footer-ending {
+          margin-top: 35px;
+          @include flex(
+            $align: flex-start,
+            $justify: space-between,
+            $flexwrap: nowrap
+          );
+
+          span {
+            @include plusJakartaSansType($weight: 500);
+            font-size: 0.7rem;
+            color: $white;
+            @include flex(
+              $align: center,
+              $justify: center,
+              $flexwrap: nowrap,
+              $gap: 10px
+            );
+            .ico {
+              width: 20px;
+              height: 20px;
+              animation: rotate 2.5s infinite linear;
+
+              @keyframes rotate {
+                from {
+                  transform: rotate(0deg);
+                }
+
+                to {
+                  transform: rotate(360deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .row {
+    @include flex($align: center, $justify: space-between, $flexwrap: nowrap);
+  }
+}
+
+/*
+* Media queries
+*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .App {
+    .App-block-page {
+      .Hero-section {
+        .hero-container {
+          .hero-container-title {
+            margin-bottom: 1.5rem;
+            .text1 {
+              font-size: 2rem;
+            }
+            .text2 {
+              font-size: 1.25rem;
+            }
+            .text3 {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .App {
+    .App-block-page {
+      .TracingBeam {
+        margin-left: -0.5rem;
+      }
+      .Hero-section {
+        .hero-container {
+          .hero-container-title {
+            margin-bottom: 1.25rem;
+            .text1 {
+              font-size: 2.25rem;
+            }
+            .text2 {
+              font-size: 1.5rem;
+            }
+            .text3 {
+              font-size: 1.25rem;
+            }
+            .intro {
+              display: none;
+            }
+          }
+        }
+      }
+      .Footer-Section {
+        &
+          > .bloc-limiter
+          > .bloc-container
+          > .bloc-contents
+          > .footer-body
+          > .right-side {
+          display: block;
+          .my-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Extra small devices (portrait tablets and large phones, 768px and down) */
+@media only screen and (max-width: 1200px) {
+  .App {
+    .App-block-page {
+      .Hero-section {
+        .hero-container {
+          width: 88%;
+          @include flex($direction: column, $align: center, $justify: center);
+
+          .hero-container-title {
+            order: 2;
+            text-align: center;
+            .text1 {
+              font-size: 2.75rem;
+            }
+            .hero-subtitle {
+              font-size: 1.25rem;
+            }
+          }
+          .hero-container-image {
+            order: 1;
+            max-width: 361px;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+            transform: translateY(-15%);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .App {
+    .App-block-page {
+      .block-page-fixed-section {
+        .textline span {
+          font-size: 0.75rem;
+        }
+      }
+      .section {
+        .bloc-container .bloc-contents .content-header {
+          span {
+            font-size: 1.575rem;
+            line-height: 2rem;
+          }
+        }
+      }
+      .TracingBeam {
+        margin-left: -1rem;
+      }
+      .Hero-section {
+        .hero-container {
+          height: 58%;
+          .hero-container-title {
+            height: 100%;
+            padding: 5%;
+            text-align: start;
+            margin-top: 15px;
+            @include flex(
+              $direction: column,
+              $align: flex-start,
+              $justify: center,
+              $gap: 15px
+            );
+
+            .text1 {
+              font-size: 2.25rem;
+            }
+            .text2 {
+              font-size: 1.5rem;
+            }
+            .text3 {
+              font-size: 1.25rem;
+            }
+            .intro {
+              max-width: 441px;
+              display: block;
+              span {
+                font-size: 0.85rem;
+                line-height: 1.5rem;
+              }
+            }
+          }
+          .hero-container-image {
+            max-width: 400px;
+            position: absolute;
+            left: 75%;
+            top: -5%;
+            transform: translate(-50%, 0);
+          }
+        }
+      }
+      .About-me-section {
+        & > .bloc-limiter > .bloc-container > .bloc-contents {
+          p {
+            font-size: 0.85rem;
+            line-height: 1.9rem;
+          }
+        }
+      }
+      .Project-Section
+        > .bloc-limiter
+        > .bloc-container
+        > .bloc-contents
+        .content-body {
+        padding: 0 10%;
+      }
+      .Footer-Section {
+        & > .bloc-limiter > .bloc-container > .bloc-contents {
+          .footer-intro {
+            span {
+              font-size: 1.575rem;
+            }
+          }
+          .footer-body .left-side div {
+            span {
+              font-size: 0.85rem;
+              line-height: 1.5rem;
+            }
+          }
+          .footer-body .right-side .my-pic {
+            width: 121px;
+            height: 121px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .App {
+    .App-block-page {
+      .block-page-fixed-section {
+        .textline span {
+          font-size: 0.9rem;
+        }
+      }
+      .section {
+        .bloc-container .bloc-contents .content-header {
+          span {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+          }
+        }
+      }
+      .Hero-section {
+        .hero-container {
+          width: 85%;
+          height: 64%;
+          .hero-container-title {
+            width: 100%;
+            padding: 5%;
+            .text1 {
+              font-size: 2.5rem;
+            }
+            .text2 {
+              font-size: 1.75rem;
+            }
+            .text3 {
+              font-size: 1.5rem;
+            }
+            .intro {
+              max-width: 441px;
+              display: block;
+              span {
+                font-size: 1rem;
+                line-height: 1.75rem;
+              }
+            }
+          }
+          .hero-container-image {
+            max-width: 441px;
+            height: auto;
+            left: 72%;
+          }
+        }
+      }
+      .Project-Section
+        > .bloc-limiter
+        > .bloc-container
+        > .bloc-contents
+        .content-body {
+        padding: 0 8%;
+      }
+      .Footer-Section {
+        height: 100vh;
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .App {
+    .App-block-page {
+      .section {
+        .bloc-container .bloc-contents .content-header {
+          span {
+            font-size: 1.875rem;
+            line-height: 3.5rem;
+          }
+        }
+      }
+      .Hero-section {
+        .hero-container {
+          width: 81%;
+          height: 72%;
+          .hero-container-title {
+            .text1 {
+              width: 100%;
+              font-size: 5rem;
+            }
+            .text2 {
+              font-size: 2.25rem;
+            }
+            .text3 {
+              font-size: 1.5rem;
+            }
+            .intro {
+              max-width: 50%;
+              span {
+                font-size: 1rem;
+                line-height: 2rem;
+              }
+            }
+          }
+          .hero-container-image {
+            min-width: 484px;
+            height: auto;
+            left: 70%;
+            top: -6%;
+          }
+        }
+      }
+
+      .About-me-section {
+        & > .bloc-limiter > .bloc-container > .bloc-contents {
+          p {
+            font-size: 1.125rem;
+            line-height: 2rem;
+          }
+          .content-items {
+            @include flex(
+              $align: center,
+              $justify: flex-start,
+              $flexwrap: wrap,
+              $gap: 35px
+            );
+          }
+        }
+      }
+      .Experience-section {
+        & > .bloc-limiter > .bloc-container > .bloc-contents {
+          .content-body {
+            .vertical-timeline {
+              &::before {
+                width: 4px;
+              }
+              &::after {
+                width: 4px;
+              }
+            }
+            .vertical-timeline .vertical-timeline-element {
+              .vertical-timeline-element-title {
+                font-size: 1.15rem;
+                line-height: 2.125rem;
+              }
+              .vertical-timeline-element-subtitle {
+                font-size: 0.75rem;
+              }
+              .vertical-timeline-work-description {
+                .item {
+                  margin-top: 10px;
+                  font-size: 0.8rem;
+                }
+              }
+              .vertical-timeline-element-date {
+                font-size: 0.85rem;
+              }
+            }
+          }
+        }
+      }
+      .Project-Section {
+        & > .bloc-limiter > .bloc-container > .bloc-contents {
+          .content-body {
+            .project-link {
+              width: 121px;
+              padding: 0.5rem;
+            }
+            .project-link a {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+      .Footer-Section {
+        & > .bloc-limiter > .bloc-container > .bloc-contents {
+          .footer-intro {
+            span {
+              font-size: 1.875rem;
+              line-height: 2.25rem;
+            }
+          }
+          .footer-body .left-side div {
+            span {
+              font-size: 1.125rem;
+              line-height: 2rem;
+            }
+          }
+
+          .footer-body .left-side button {
+            width: 121px;
+            padding: 0.8rem;
+            font-size: 0.9rem;
+          }
+          .footer-ending span {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}

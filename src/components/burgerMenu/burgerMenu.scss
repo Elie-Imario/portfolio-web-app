@@ -1,0 +1,39 @@
+@import "../../assets/imports/import";
+.burgerMenu {
+  & {
+    width: 36px;
+    height: 36px;
+    .burgerMenu-toggler {
+      outline: none;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+
+      &:hover {
+        & .burgerMenu-toggler-bar.bar1,
+        & .burgerMenu-toggler-bar.bar3 {
+          width: 24px;
+        }
+      }
+      .burgerMenu-toggler-bar {
+        height: 2px;
+        border-radius: 1px;
+        background: $white;
+        @include flex($align: flex-end, $justify: flex-end, $flexwrap: nowrap);
+        margin: 0.35rem;
+
+        &.bar1,
+        &.bar3 {
+          width: 15px;
+          transition: width 0.25s ease;
+        }
+        &.bar1 {
+          float: right;
+        }
+        &.bar2 {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
