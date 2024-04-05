@@ -74,7 +74,7 @@
   .service-item {
     .serviceName {
       width: 50%;
-      font-size: 1rem;
+      font-size: 0.85rem;
       @include plusJakartaSansType($weight: 500);
       text-wrap: nowrap;
       color: $gray-500;

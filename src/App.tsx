@@ -14,11 +14,16 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import myPic from "./assets/images/me2.jpg";
 import myPic_2 from "./assets/images/ondry2.png";
 import "./services/plugins/index";
 import "react-vertical-timeline-component/style.min.css";
 import "./App.scss";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faSkype } from "@fortawesome/free-brands-svg-icons/faSkype";
 
 function App() {
   return (
@@ -26,14 +31,7 @@ function App() {
       {/* Header-Section */}
       <div className="Header-section">
         <div className="NavBar-app-header">
-          <div className="row">
-            <div className="col">
-              <div className="navBar-brand"></div>
-            </div>
-            <div className="col">
-              <BurgerMenu />
-            </div>
-          </div>
+          <BurgerMenu />
         </div>
       </div>
       <div className="App-block-page">
@@ -243,7 +241,7 @@ function App() {
             </div>
           </div>
           {/* Footer-Section */}
-          <div className="Footer-Section section mt" id="">
+          <div className="Footer-Section section f-height mt" id="">
             <div className="bloc-limiter">
               <div className="bloc-container">
                 <div className="bloc-contents">
@@ -255,7 +253,7 @@ function App() {
                   </div>
                   <div className="footer-body">
                     <div className="left-side">
-                      <div>
+                      <div className="text">
                         <span>
                           N'hésitez pas à me contacter pour discuter de mes
                           compétences ou de toute opportunité de collaboration.
@@ -265,8 +263,33 @@ function App() {
                         </span>
                       </div>
                       <div className="spacer_layer"></div>
-                      <div className="btn_gropups">
-                        <button type="button">Contact me</button>
+                      <div className="infos">
+                        <div className="contact">
+                          <div className="ico">
+                            <FontAwesomeIcon icon={faPhone} />
+                            <span>+261 32 67 904 60</span>
+                          </div>
+                          <div className="ico">
+                            <FontAwesomeIcon icon={faEnvelope} />
+                            <span>elieimario1@gmail.com</span>
+                          </div>
+                          <div className="ico">
+                            <FontAwesomeIcon icon={faSkype} />
+                            <span>imario ANDRINIRAINY</span>
+                          </div>
+                        </div>
+                        <div className="networks">
+                          <div className="ico">
+                            <a href="">
+                              <FontAwesomeIcon icon={faGithub} />
+                            </a>
+                          </div>
+                          <div className="ico">
+                            <a href="">
+                              <FontAwesomeIcon icon={faLinkedin} />
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div className="right-side">
