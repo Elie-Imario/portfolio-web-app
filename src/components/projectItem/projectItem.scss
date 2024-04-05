@@ -9,7 +9,7 @@
       width: 100%;
       background: #002644;
       box-shadow: 0 4px 8px 0 rgba($color: $black, $alpha: 0.2);
-      padding: 1.15rem;
+      padding: 1.5rem 1.15rem;
       border-radius: 0.15rem;
       @include flex(
         $direction: column,
@@ -19,6 +19,24 @@
       );
       &:not(:nth-of-type(4)) {
         margin-bottom: 36px;
+      }
+      .project-links {
+        width: 100%;
+        @include flex($align: flex-start, $justify: space-between);
+        .ico {
+          cursor: pointer;
+          svg {
+            font-size: 1.25rem;
+            color: $gray-600;
+            transition: all 0.5s ease;
+            &.colored {
+              color: $primary;
+            }
+            &:hover {
+              color: $gray-100;
+            }
+          }
+        }
       }
       .project-name {
         width: 100%;
@@ -88,6 +106,9 @@
         .project-language {
           @include flex($align: center, $justify: flex-end, $gap: 15px);
         }
+        .project-links {
+          @include flex($align: center, $justify: flex-end);
+        }
       }
       .project-img {
         order: 1;
@@ -98,6 +119,9 @@
       .project-details {
         .project-language {
           @include flex($align: center, $justify: flex-start, $gap: 15px);
+        }
+        .project-links {
+          @include flex($align: center, $justify: flex-start);
         }
       }
       .project-img {
@@ -155,6 +179,22 @@
             color: $gray-200;
             font-size: 0.6rem;
             @include plusJakartaSansType($weight: 400);
+          }
+        }
+        .project-links {
+          width: 100%;
+          .ico {
+            svg {
+              font-size: 1.5rem;
+              color: $gray-600;
+              transition: all 0.5s ease;
+              &.colored {
+                color: $primary;
+              }
+              &:hover {
+                color: $gray-100;
+              }
+            }
           }
         }
       }
