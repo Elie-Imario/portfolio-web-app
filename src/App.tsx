@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { BurgerMenu } from "./components/burgerMenu";
 import { ReverseTitle } from "./components/reverseTitle";
 import { TracingBeam } from "./components/ui/tracing-beam";
@@ -16,18 +17,79 @@ import {
 } from "react-vertical-timeline-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faSkype } from "@fortawesome/free-brands-svg-icons/faSkype";
+import ScrollReveal from "scrollreveal";
+import {
+  RevealImgConfig,
+  RevealLineConfig,
+  TitleRevealConfig,
+  contentsReveal,
+  fromLeftReveal2,
+  fromLeftReveal3,
+  fromLeftReveal4,
+  fromRightReveal3,
+  fromRightReveal4,
+} from "./utils/scrollReveal.config";
 import myPic from "./assets/images/me2.jpg";
 import myPic_2 from "./assets/images/ondry2.png";
 import "./services/plugins/index";
 import "react-vertical-timeline-component/style.min.css";
 import "./App.scss";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faSkype } from "@fortawesome/free-brands-svg-icons/faSkype";
 
 function App() {
+  const mainRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const contentsRef = useRef<HTMLParagraphElement>(null);
+  const VerticalTimelineRef = useRef<HTMLDivElement>(null);
+  const projectLinkRef = useRef<HTMLDivElement>(null);
+  const leftSideFooterRef = useRef<HTMLDivElement>(null);
+  const infosRef = useRef<HTMLDivElement>(null);
+  const rightSideFooterRef = useRef<HTMLDivElement>(null);
+  const footerEndingRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    mainRef.current
+      ?.querySelectorAll<HTMLElement>(".content-header")
+      .forEach((item) => {
+        ScrollReveal().reveal(item, TitleRevealConfig);
+      });
+    ScrollReveal().reveal(contentsRef.current as HTMLElement, contentsReveal);
+    ScrollReveal().reveal(
+      projectLinkRef.current as HTMLElement,
+      fromRightReveal3
+    );
+    ScrollReveal().reveal(
+      leftSideFooterRef.current?.querySelector(".text") as HTMLElement,
+      fromLeftReveal2
+    );
+    ScrollReveal().reveal(
+      infosRef.current?.querySelector(".contact") as HTMLElement,
+      fromLeftReveal3
+    );
+    ScrollReveal().reveal(
+      infosRef.current?.querySelector(".networks") as HTMLElement,
+      fromRightReveal3
+    );
+    ScrollReveal().reveal(
+      leftSideFooterRef.current?.querySelector(".spacer_layer") as HTMLElement,
+      RevealLineConfig
+    );
+    ScrollReveal().reveal(
+      rightSideFooterRef.current?.querySelector(".my-pic") as HTMLElement,
+      RevealImgConfig
+    );
+    ScrollReveal().reveal(
+      footerEndingRef.current?.querySelector("#copyright") as HTMLElement,
+      fromLeftReveal4
+    );
+    ScrollReveal().reveal(
+      footerEndingRef.current?.querySelector("#madewith") as HTMLElement,
+      fromRightReveal4
+    );
+  }, []);
   return (
-    <div className="App" id="App">
+    <div className="App" id="App" ref={mainRef}>
       {/* Header-Section */}
       <div className="Header-section">
         <div className="NavBar-app-header">
@@ -42,7 +104,7 @@ function App() {
             </div>
           </div>
           {/* Hero-Section */}
-          <div className="Hero-section section f-height" id="">
+          <div className="Hero-section section f-height" ref={heroRef}>
             <div className="hero-container">
               <div className="hero-container-title">
                 <span className="text3">Bonjour👋, je suis</span>
@@ -73,7 +135,7 @@ function App() {
                   <div className="content-header">
                     <span>Me concernant</span>
                   </div>
-                  <p className="px-8 mt-12">
+                  <p className="px-8 mt-12" ref={contentsRef}>
                     Salut ! Je suis Imario, un passionné de création
                     d'applications et de sites web innovants. Actuellement
                     étudiant en dernière année de Master, j'ai découvert ma
@@ -123,8 +185,8 @@ function App() {
                       Où ai-je acquis mon expérience professionnelle ?
                     </span>
                   </div>
-                  <div className="content-body mt-12">
-                    <VerticalTimeline>
+                  <div className="content-body mt-12" ref={VerticalTimelineRef}>
+                    <VerticalTimeline lineColor="transparent">
                       {Experiences.map((item, index) => {
                         return (
                           <VerticalTimelineElement
@@ -199,6 +261,7 @@ function App() {
                         <ServiceItem
                           serviceName={item.serviceName}
                           serviceImg={item.serviceImg}
+                          serviceKey={index}
                           key={index}
                         />
                       ))}
@@ -227,10 +290,11 @@ function App() {
                           linktoGitHub={item.linktoGitHub}
                           languages={item.languages}
                           key={index}
+                          projectKey={index}
                         />
                       ))}
                     </div>
-                    <div className="project-link">
+                    <div className="project-link" ref={projectLinkRef}>
                       <a className="#" href="">
                         Voir plus
                       </a>
@@ -245,14 +309,14 @@ function App() {
             <div className="bloc-limiter">
               <div className="bloc-container">
                 <div className="bloc-contents">
-                  <div className="footer-intro">
+                  <div className="content-header">
                     <span>
                       Commençons dès aujourd'hui à créer quelque chose
                       d'exceptionnel ensemble.
                     </span>
                   </div>
                   <div className="footer-body">
-                    <div className="left-side">
+                    <div className="left-side" ref={leftSideFooterRef}>
                       <div className="text">
                         <span>
                           N'hésitez pas à me contacter pour discuter de mes
@@ -263,7 +327,7 @@ function App() {
                         </span>
                       </div>
                       <div className="spacer_layer"></div>
-                      <div className="infos">
+                      <div className="infos" ref={infosRef}>
                         <div className="contact">
                           <div className="ico">
                             <FontAwesomeIcon icon={faPhone} />
@@ -292,15 +356,15 @@ function App() {
                         </div>
                       </div>
                     </div>
-                    <div className="right-side">
+                    <div className="right-side" ref={rightSideFooterRef}>
                       <div className="my-pic">
                         <img src={myPic} />
                       </div>
                     </div>
                   </div>
-                  <div className="footer-ending">
-                    <span>© elieimario</span>
-                    <span>
+                  <div className="footer-ending" ref={footerEndingRef}>
+                    <span id="copyright">© elieimario</span>
+                    <span id="madewith">
                       Made with
                       <div className="ico">
                         <img src="/icons/react_ts.svg" />

@@ -40,6 +40,7 @@
       height: 100%;
       position: relative;
       z-index: 12;
+      overflow: hidden;
       &.f-height {
         height: 100vh;
       }
@@ -134,6 +135,7 @@
     }
 
     .About-me-section {
+      overflow: hidden;
       & > .bloc-limiter > .bloc-container > .bloc-contents {
         p {
           color: $gray-500;
@@ -157,40 +159,6 @@
       & > .bloc-limiter > .bloc-container > .bloc-contents {
         .content-body {
           padding-left: 1.5rem;
-          .vertical-timeline {
-            &::before {
-              width: 2px;
-              background: $gray-500;
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            }
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 18px;
-              width: 2px;
-              background: #002644;
-              animation: fill 5s infinite linear;
-              @keyframes fill {
-                0% {
-                  height: 0;
-                }
-                25% {
-                  height: 50%;
-                }
-                50% {
-                  height: 100%;
-                }
-                75% {
-                  height: 50%;
-                }
-                100% {
-                  height: 0;
-                }
-              }
-            }
-          }
-
           .vertical-timeline .vertical-timeline-element {
             & > .entreprise-Logo {
               overflow: hidden;
@@ -262,6 +230,9 @@
       & > .bloc-limiter > .bloc-container > .bloc-contents {
         .content-body {
           width: 100%;
+          .service-items {
+            overflow: hidden;
+          }
         }
       }
     }
@@ -269,6 +240,7 @@
     .Project-Section {
       & > .bloc-limiter > .bloc-container > .bloc-contents {
         .content-body {
+          overflow: hidden;
           width: 100%;
           .project-link {
             margin-top: 15px;
@@ -300,7 +272,7 @@
 
     .Footer-Section {
       & > .bloc-limiter > .bloc-container > .bloc-contents {
-        .footer-intro {
+        .content-header {
           span {
             font-size: 1.125rem;
             @include plusJakartaSansType($weight: 600);
@@ -640,7 +612,7 @@
       }
       .Footer-Section {
         & > .bloc-limiter > .bloc-container > .bloc-contents {
-          .footer-intro {
+          .content-header {
             span {
               font-size: 1.575rem;
             }
@@ -804,14 +776,6 @@
       .Experience-section {
         & > .bloc-limiter > .bloc-container > .bloc-contents {
           .content-body {
-            .vertical-timeline {
-              &::before {
-                width: 4px;
-              }
-              &::after {
-                width: 4px;
-              }
-            }
             .vertical-timeline .vertical-timeline-element {
               .vertical-timeline-element-title {
                 font-size: 1.15rem;
