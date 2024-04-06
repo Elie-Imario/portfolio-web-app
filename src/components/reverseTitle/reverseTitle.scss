@@ -6,6 +6,7 @@
   left: 0;
   max-width: 225px;
   width: 100%;
+  z-index: 15;
   transform: translate(-50%, -50%);
   .textline {
     transform: rotate(-90deg);
