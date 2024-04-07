@@ -295,9 +295,7 @@ function App() {
                       ))}
                     </div>
                     <div className="project-link" ref={projectLinkRef}>
-                      <a className="#" href="">
-                        Voir plus
-                      </a>
+                      <a href="https://github.com/Elie-Imario">Voir plus</a>
                     </div>
                   </div>
                 </div>
@@ -344,12 +342,12 @@ function App() {
                         </div>
                         <div className="networks">
                           <div className="ico">
-                            <a href="">
+                            <a href="https://github.com/Elie-Imario">
                               <FontAwesomeIcon icon={faGithub} />
                             </a>
                           </div>
                           <div className="ico">
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/elie-imario-8844782b5">
                               <FontAwesomeIcon icon={faLinkedin} />
                             </a>
                           </div>

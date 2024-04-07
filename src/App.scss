@@ -245,6 +245,13 @@
           .project-link {
             margin-top: 15px;
             float: right;
+          }
+          .project-link a {
+            display: block;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $primary;
+            font-size: 0.7rem;
             padding: 0.5rem;
             min-width: 81px;
             border: 1px solid $primary;
@@ -252,19 +259,11 @@
             text-align: center;
             cursor: pointer;
             transition: all 0.5s ease;
+            @include plusJakartaSansType($weight: 600);
             &:hover {
               background: $primary;
-              a {
-                color: $white;
-              }
+              color: $white;
             }
-          }
-          .project-link a {
-            text-decoration: none;
-            text-transform: capitalize;
-            color: $primary;
-            font-size: 0.7rem;
-            @include plusJakartaSansType($weight: 600);
           }
         }
       }
@@ -525,7 +524,6 @@
             width: 100%;
             height: auto;
             z-index: -1;
-            transform: translateY(-15%);
           }
         }
       }
@@ -588,9 +586,10 @@
           }
           .hero-container-image {
             max-width: 400px;
+            height: auto;
             position: absolute;
-            left: 75%;
-            top: -5%;
+            top: 0;
+            left: 81%;
             transform: translate(-50%, 0);
           }
         }
@@ -677,8 +676,8 @@
           }
           .hero-container-image {
             max-width: 441px;
+            width: 100%;
             height: auto;
-            left: 72%;
           }
         }
       }
@@ -751,8 +750,6 @@
           .hero-container-image {
             min-width: 484px;
             height: auto;
-            left: 70%;
-            top: -6%;
           }
         }
       }
@@ -800,11 +797,8 @@
       .Project-Section {
         & > .bloc-limiter > .bloc-container > .bloc-contents {
           .content-body {
-            .project-link {
-              width: 121px;
-              padding: 0.5rem;
-            }
             .project-link a {
+              max-width: 81px;
               font-size: 0.9rem;
             }
           }

@@ -125,7 +125,7 @@ export const Projects = [
     projectScreen: "/images/projectScreenShoot/ABDA_MONITORING_PROJECT.png",
     projectDescription:
       "Il s'agit d'un projet de surveillance compact visant à tracer les actions effectuées par un utilisateur sur une base de données d'étudiants.",
-    linktoGitHub: "",
+    linktoGitHub: "https://github.com/Elie-Imario/ABDA-FrontEnd.git",
     languages: [
       {
         language: "ReactJs",
@@ -167,7 +167,7 @@ export const Projects = [
     projectScreen: "/images/projectScreenShoot/Go-Travel.png",
     projectDescription:
       "Amateurs de voyages et d'aventures ? Avec Go-Travel, partez à la découverte des sites touristiques emblématiques de Madagascar en toute simplicité. Réservez vos visites en quelques clics pour découvrir les trésors cachés de cette magnifique île.",
-    linktoGitHub: "",
+    linktoGitHub: "https://github.com/Elie-Imario/Go-Travel.git",
     languages: [
       {
         language: "VueJs",
@@ -180,7 +180,7 @@ export const Projects = [
     projectScreen: "/images/projectScreenShoot/eFandray.png",
     projectDescription:
       "eFandray est une application web de chat. Simple, intuitive et pratique, elle permet de rester en contact avec vos proches, collègues et amies en toute simplicité.",
-    linktoGitHub: "",
+    linktoGitHub: "https://github.com/Elie-Imario/FrontEnd-eFandray.git",
     languages: [
       {
         language: "ReactJs",
