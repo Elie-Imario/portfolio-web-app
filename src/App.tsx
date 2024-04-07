@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { BurgerMenu } from "./components/burgerMenu";
 import { ReverseTitle } from "./components/reverseTitle";
-import { TracingBeam } from "./components/ui/tracing-beam";
+import { TracingBeam } from "./components/ui/tracingBean/tracing-beam";
 import {
   Experiences,
   Languages,
@@ -33,7 +33,7 @@ import {
   fromRightReveal4,
 } from "./utils/scrollReveal.config";
 import myPic from "./assets/images/me2.jpg";
-import myPic_2 from "./assets/images/ondry2.png";
+import myPic_2 from "./assets/images/3 working.png";
 import "./services/plugins/index";
 import "react-vertical-timeline-component/style.min.css";
 import "./App.scss";
@@ -48,6 +48,7 @@ function App() {
   const infosRef = useRef<HTMLDivElement>(null);
   const rightSideFooterRef = useRef<HTMLDivElement>(null);
   const footerEndingRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     mainRef.current
       ?.querySelectorAll<HTMLElement>(".content-header")
@@ -90,7 +91,6 @@ function App() {
   }, []);
   return (
     <div className="App" id="App" ref={mainRef}>
-      {/* Header-Section */}
       <div className="Header-section">
         <div className="NavBar-app-header">
           <BurgerMenu />
@@ -377,6 +377,7 @@ function App() {
           </div>
         </TracingBeam>
       </div>
+      {/* Header-Section */}
     </div>
   );
 }

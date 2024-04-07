@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";
-import { cn } from "../../utils/cn";
+import { cn } from "../../../utils/cn";
 
 export const TracingBeam = ({
   children,

@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from "react";
 import { Language } from "../../services/types/dataTypes";
 import { createMedia } from "@artsy/fresnel";
-import { Meteors } from "../ui/meteor";
+import { Meteors } from "../ui/meteor/meteor";
 import ScrollReveal from "scrollreveal";
 import {
   fromLeftReveal,
