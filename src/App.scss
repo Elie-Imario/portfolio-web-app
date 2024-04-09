@@ -455,6 +455,14 @@
           }
         }
       }
+
+      .Project-Section
+        > .bloc-limiter
+        > .bloc-container
+        > .bloc-contents
+        .content-body {
+        padding: 0 10%;
+      }
       .Footer-Section {
         &
           > .bloc-limiter
@@ -602,13 +610,6 @@
           }
         }
       }
-      .Project-Section
-        > .bloc-limiter
-        > .bloc-container
-        > .bloc-contents
-        .content-body {
-        padding: 0 10%;
-      }
       .Footer-Section {
         & > .bloc-limiter > .bloc-container > .bloc-contents {
           .content-header {
@@ -680,13 +681,6 @@
             height: auto;
           }
         }
-      }
-      .Project-Section
-        > .bloc-limiter
-        > .bloc-container
-        > .bloc-contents
-        .content-body {
-        padding: 0 8%;
       }
       .Footer-Section {
         .footer-body .left-side .infos {

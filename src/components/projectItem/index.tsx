@@ -32,7 +32,7 @@ const { MediaContextProvider, Media } = createMedia({
   // breakpoints values can be either strings or integers
   breakpoints: {
     sm: 0,
-    md: 768,
+    md: 992,
   },
 });
 
@@ -136,7 +136,7 @@ export const ProjectItem: FC<Props> = ({
             className={`w-full relative project-sm-${projectKey}`}
             ref={projectSmRef}
           >
-            <div className="project-details relative overflow-hidden">
+            <div className="project-sm-details relative overflow-hidden">
               <div className="project-links">
                 <div className="ico">
                   <FontAwesomeIcon icon={faFolder} className="colored" />

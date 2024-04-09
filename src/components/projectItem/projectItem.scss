@@ -3,9 +3,9 @@
 * Media queries
 */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .project-item {
-    .project-details {
+    .project-sm-details {
       width: 100%;
       background: #002644;
       box-shadow: 0 4px 8px 0 rgba($color: $black, $alpha: 0.2);
@@ -86,7 +86,7 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .project-item {
     &:not(:nth-of-type(4)) {
       margin-bottom: 36px;
@@ -185,7 +185,7 @@
           width: 100%;
           .ico {
             svg {
-              font-size: 1.5rem;
+              font-size: 1.25em;
               color: $gray-600;
               transition: all 0.5s ease;
               &.colored {
@@ -203,6 +203,7 @@
         border-radius: 0.125rem;
         overflow: hidden;
         height: 196px;
+        min-height: 240px;
         width: 100%;
         &::before {
           content: "";
@@ -233,23 +234,6 @@
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .project-item {
-    .fresnel-container {
-      .project-details {
-        .project-description p {
-          font-size: 0.8rem;
-          line-height: 1.7rem;
-        }
-      }
-      .project-img {
-        min-height: 240px;
-      }
-    }
-  }
-}
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .project-item {
@@ -266,6 +250,11 @@
         }
         .item span {
           font-size: 0.65rem;
+        }
+      }
+      .project-links .ico {
+        svg {
+          font-size: 1.5em;
         }
       }
       .project-img {

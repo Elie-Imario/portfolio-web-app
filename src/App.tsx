@@ -303,7 +303,7 @@ function App() {
             </div>
           </div>
           {/* Footer-Section */}
-          <div className="Footer-Section section f-height mt" id="">
+          <div className="Footer-Section section f-height" id="">
             <div className="bloc-limiter">
               <div className="bloc-container">
                 <div className="bloc-contents">
