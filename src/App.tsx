@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { BurgerMenu } from "./components/burgerMenu";
 import { ReverseTitle } from "./components/reverseTitle";
 import { TracingBeam } from "./components/ui/tracingBean/tracing-beam";
 import {
@@ -160,11 +159,6 @@ function App() {
         <Preloader />
       </div>
       <div className="App" id="App" ref={mainRef}>
-        <div className="Header-section">
-          <div className="NavBar-app-header">
-            <BurgerMenu />
-          </div>
-        </div>
         <div className="App-block-page">
           <TracingBeam>
             <div className="block-page-fixed-section">
@@ -178,15 +172,16 @@ function App() {
                 <div className="hero-container-title">
                   <span className="text3">Bonjour👋, je suis</span>
                   <span className="text1">Elie Imario</span>
-                  <span className="text2">Full Stack Développeur</span>
+                  <span className="text2">Développeur Full-Stack </span>
                   <div className="intro">
                     <span>
-                      Jeune étudiant de 22 ans en dernière année de Master 👨‍🎓.
-                      Un passionné de la programmation qui aime construire des
-                      <span className="colored"> applications</span> et des
-                      <span className="colored"> sites web </span>
-                      <span className="colored">conviviale </span> et
-                      <span className="colored"> innovante.</span>
+                      Développeur full-stack, spécialisé dans la création d'
+                      <span className="colored">applications web</span> et
+                      <span className="colored"> mobiles</span>
+                      <span className="colored"> intuitives </span> et
+                      <span className="colored"> performantes.</span> . Mon
+                      objectif : transformer vos besoins en solutions numériques
+                      optimales.
                     </span>
                   </div>
                 </div>
@@ -205,20 +200,19 @@ function App() {
                       <span>Me concernant</span>
                     </div>
                     <p className="px-8 mt-12" ref={contentsRef}>
-                      Salut ! Je suis Imario, un passionné de création
-                      d'applications et de sites web innovants. Actuellement
-                      étudiant en dernière année de Master, j'ai découvert ma
-                      passion pour la programmation il y a quelques années.
-                      Depuis lors, j'ai eu l'opportunité de concevoir des
-                      applications et des sites web conviviaux et novateurs. Mon
-                      parcours m'a conduit à travailler dans divers
-                      environnements, aussi bien dans le secteur privé au sein
-                      de grandes entreprises que dans le secteur public.
+                      Bonjour ! Je suis Imario, passionné par la création
+                      d'applications web et mobiles innovantes. J'ai découvert
+                      ma passion pour la programmation il y a quelques années
+                      et, depuis, j'ai eu l'opportunité de concevoir et de
+                      réaliser des produits numériques conviviaux et novateurs.
+                      Mon parcours m'a conduit à travailler dans divers
+                      environnements, tant dans le secteur privé, au sein de
+                      grandes entreprises, que dans le secteur public.
                       Aujourd'hui, je me concentre principalement sur le
-                      développement Full Stack, avec une préférence pour le
-                      frontend plutôt que le backend. Je suis déterminé à
-                      continuer à perfectionner mes compétences et à contribuer
-                      à l'évolution de l'univers numérique.
+                      développement Full Stack, avec un profil davantage orienté
+                      frontend que backend. Je suis déterminé à continuer de
+                      perfectionner mes compétences et à contribuer à
+                      l'évolution de l'univers numérique.
                     </p>
                   </div>
                 </div>
@@ -228,7 +222,7 @@ function App() {
                     <div className="content-header">
                       <span>
                         Les technologies avec lesquelles j'ai acquis de
-                        l'expérience :
+                        l'expérience
                       </span>
                     </div>
                     <div className="content-items px-8 mt-12">
@@ -252,7 +246,7 @@ function App() {
                   <div className="bloc-contents">
                     <div className="content-header">
                       <span>
-                        Où ai-je acquis mon expérience professionnelle ?
+                        Où ai-je acquis mes expériences professionnelles ?
                       </span>
                     </div>
                     <div
@@ -351,7 +345,7 @@ function App() {
                   <ReverseTitle ico="🚀" titleLead="Mes travaux" />
                   <div className="bloc-contents">
                     <div className="content-header">
-                      <span>Quelques-uns des projets que j'ai réalisés:</span>
+                      <span>Quelques-uns des projets que j'ai réalisé</span>
                     </div>
                     <div className="content-body px-8 mt-12">
                       <div className="grid-container">

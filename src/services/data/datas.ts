@@ -22,6 +22,14 @@ export const Languages = [
     languageIcon: "/icons/react_ts.svg",
   },
   {
+    language: "React-Native",
+    languageIcon: "/icons/react-native.svg",
+  },
+  {
+    language: "NextJS",
+    languageIcon: "/icons/nextJs.svg",
+  },
+  {
     language: "NodeJS",
     languageIcon: "/icons/nodejs.svg",
   },
@@ -45,21 +53,30 @@ export const Languages = [
     language: "SpringBoot",
     languageIcon: "/icons/spring-boot.svg",
   },
-  {
-    language: "PHP",
-    languageIcon: "/icons/php.svg",
-  },
-  {
-    language: "Symfony",
-    languageIcon: "/icons/symfony.svg",
-  },
-  {
-    language: "Python",
-    languageIcon: "/icons/python.svg",
-  },
 ] as Language[];
 
 export const Experiences = [
+  {
+    from: "Juil. 2024",
+    to: "Oct. 2024",
+    poste: "Stagiaire fullStack Web",
+    entreprise: "Nexitia",
+    location: "Antananarivo, Madagascar",
+    entrepriseLogo: "/icons/nexitia.png",
+    logobg: "#fff",
+    projectDetails: {
+      projectDescription: [
+        "Contribution à la maintenance et au développement de nouvelles fonctionnalités pour la plateforme web LiveShopping avec le framework NextJs et SpringBoot.",
+        "Participation au développement de l'application Handeha-Voyage avec le framework NextJs et SpringBoot.",
+      ],
+      languages: [
+        {
+          language: "ReactJs",
+          languageIcon: "/icons/react_ts.svg",
+        },
+      ],
+    },
+  },
   {
     from: "Oct. 2022",
     to: "Jan. 2023",
@@ -121,6 +138,24 @@ export const Services = [
 
 export const Projects = [
   {
+    projectName: "LiveShopping",
+    projectScreen:
+      "/images/projectScreenShoot/Katappult Live Shopping - Home page.png",
+    projectDescription:
+      "Une plateforme web innovante combinant e-commerce et diffusion en direct. L' objectif est de proposer une solution interactive qui permet aux utilisateurs de découvrir, interagir, et acheter des produits en temps réel, tout en suivant des démonstrations en direct.",
+    linktoGitHub: "",
+    languages: [
+      {
+        language: "NextJs",
+        languageIcon: "/icons/nextJs.svg",
+      },
+      {
+        language: "SpringBoot",
+        languageIcon: "/icons/spring-boot.svg",
+      },
+    ],
+  },
+  {
     projectName: "ABDA Project",
     projectScreen: "/images/projectScreenShoot/ABDA_MONITORING_PROJECT.png",
     projectDescription:
@@ -138,27 +173,6 @@ export const Projects = [
       {
         language: "SpringBoot",
         languageIcon: "/icons/spring-boot.svg",
-      },
-    ],
-  },
-  {
-    projectName: "ENI-BackOffice",
-    projectScreen: "/images/projectScreenShoot/eni.jpg",
-    projectDescription:
-      "Une plateforme web élaborée dans le but de faciliter le suivi des étudiants de l'École Nationale d'Informatique. Elle permet de surveiller leur présence aux séances de cours afin de vérifier leur assiduité.",
-    linktoGitHub: "",
-    languages: [
-      {
-        language: "ReactJs",
-        languageIcon: "/icons/react_ts.svg",
-      },
-      {
-        language: "TypeScript",
-        languageIcon: "/icons/typescript.svg",
-      },
-      {
-        language: "Express",
-        languageIcon: "/icons/express-js.svg",
       },
     ],
   },
