@@ -23,7 +23,7 @@ type Props = {
   projectName: string;
   projectScreen: string;
   projectDescription: string;
-  linktoGitHub: string;
+  linkToGitHub: string;
   languages: Language[];
   projectKey: number;
 };
@@ -40,7 +40,7 @@ export const ProjectItem: FC<Props> = ({
   projectName,
   projectScreen,
   projectDescription,
-  linktoGitHub,
+  linkToGitHub,
   languages,
   projectKey,
 }) => {
@@ -142,7 +142,7 @@ export const ProjectItem: FC<Props> = ({
                   <FontAwesomeIcon icon={faFolder} className="colored" />
                 </div>
                 <div className="ico">
-                  <a href={linktoGitHub}>
+                  <a href={linkToGitHub}>
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
@@ -195,13 +195,15 @@ export const ProjectItem: FC<Props> = ({
                 );
               })}
             </div>
-            <div className="project-links">
-              <div className="ico">
-                <a href={linktoGitHub}>
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
+            {linkToGitHub && (
+              <div className="project-links">
+                <div className="ico">
+                  <a href={linkToGitHub}>
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <div
             className={`project-img project-xl-${projectKey}`}
