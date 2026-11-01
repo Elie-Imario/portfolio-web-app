@@ -143,7 +143,7 @@ export const Projects = [
       "/images/projectScreenShoot/Katappult Live Shopping - Home page.png",
     projectDescription:
       "Une plateforme web innovante combinant e-commerce et diffusion en direct. L' objectif est de proposer une solution interactive qui permet aux utilisateurs de découvrir, interagir, et acheter des produits en temps réel, tout en suivant des démonstrations en direct.",
-    linktoGitHub: "",
+    linkToGitHub: "",
     languages: [
       {
         language: "NextJs",
@@ -160,7 +160,7 @@ export const Projects = [
     projectScreen: "/images/projectScreenShoot/ABDA_MONITORING_PROJECT.png",
     projectDescription:
       "Il s'agit d'un projet de surveillance compact visant à tracer les actions effectuées par un utilisateur sur une base de données d'étudiants.",
-    linktoGitHub: "https://github.com/Elie-Imario/ABDA-FrontEnd.git",
+    linkToGitHub: "https://github.com/Elie-Imario/ABDA-FrontEnd.git",
     languages: [
       {
         language: "ReactJs",
@@ -181,7 +181,7 @@ export const Projects = [
     projectScreen: "/images/projectScreenShoot/Go-Travel.png",
     projectDescription:
       "Amateurs de voyages et d'aventures ? Avec Go-Travel, partez à la découverte des sites touristiques emblématiques de Madagascar en toute simplicité. Réservez vos visites en quelques clics pour découvrir les trésors cachés de cette magnifique île.",
-    linktoGitHub: "https://github.com/Elie-Imario/Go-Travel.git",
+    linkToGitHub: "https://github.com/Elie-Imario/Go-Travel.git",
     languages: [
       {
         language: "VueJs",
@@ -194,7 +194,7 @@ export const Projects = [
     projectScreen: "/images/projectScreenShoot/eFandray.png",
     projectDescription:
       "eFandray est une application web de chat. Simple, intuitive et pratique, elle permet de rester en contact avec vos proches, collègues et amies en toute simplicité.",
-    linktoGitHub: "https://github.com/Elie-Imario/FrontEnd-eFandray.git",
+    linkToGitHub: "https://github.com/Elie-Imario/FrontEnd-eFandray.git",
     languages: [
       {
         language: "ReactJs",

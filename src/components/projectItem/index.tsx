@@ -141,11 +141,13 @@ export const ProjectItem: FC<Props> = ({
                 <div className="ico">
                   <FontAwesomeIcon icon={faFolder} className="colored" />
                 </div>
-                <div className="ico">
-                  <a href={linkToGitHub}>
-                    <FontAwesomeIcon icon={faGithub} />
-                  </a>
-                </div>
+                {linkToGitHub && (
+                  <div className="ico">
+                    <a href={linkToGitHub}>
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                  </div>
+                )}
               </div>
               <div className="project-name">
                 <span>{projectName}</span>
