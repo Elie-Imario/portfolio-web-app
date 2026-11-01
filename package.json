@@ -44,5 +44,15 @@
     "tailwindcss": "^3.4.3",
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
+  },
+  "allowScripts": {
+    "esbuild@0.20.2": true,
+    "@fortawesome/fontawesome-common-types": false,
+    "@fortawesome/fontawesome-svg-core": false,
+    "@fortawesome/free-brands-svg-icons": false,
+    "@fortawesome/free-regular-svg-icons": false,
+    "@fortawesome/free-solid-svg-icons": false,
+    "react-vertical-timeline-component": false,
+    "scrollreveal": false
   }
 }
