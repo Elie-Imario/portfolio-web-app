@@ -28,6 +28,6 @@ export type Project = {
   projectName: string;
   projectScreen: string;
   projectDescription: string;
-  linktoGitHub: string;
+  linkToGitHub: string;
   languages: Language[];
 };

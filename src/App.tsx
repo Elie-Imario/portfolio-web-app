@@ -354,7 +354,7 @@ function App() {
                             projectName={item.projectName}
                             projectDescription={item.projectDescription}
                             projectScreen={item.projectScreen}
-                            linktoGitHub={item.linktoGitHub}
+                            linkToGitHub={item.linkToGitHub}
                             languages={item.languages}
                             key={index}
                             projectKey={index}
