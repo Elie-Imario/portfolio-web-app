@@ -3,14 +3,6 @@ import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 export default {
   content: ["./src/**/*.{ts,tsx}"],
   darkMode: "class",
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-    ],
-  },
   theme: {
     extend: {
       animation: {

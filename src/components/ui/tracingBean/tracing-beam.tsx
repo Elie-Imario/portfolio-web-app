@@ -25,11 +25,11 @@ export const TracingBeam = ({
   useEffect(() => {
     // Function to update height state
     const updateProperty = () => {
-      setDivProperty({
-        ...divProperty,
+      setDivProperty((prev) => ({
+        ...prev,
         divWidth: ref.current?.offsetWidth as number,
         divHeight: ref.current?.offsetHeight as number,
-      });
+      }));
     };
 
     // Initial height update
