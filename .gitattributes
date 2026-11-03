@@ -1,0 +1,12 @@
+# Store text files with LF line endings in the repository; Git converts
+# them on checkout according to each contributor's settings.
+* text=auto
+
+# Never convert binary assets.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.woff2 binary
