@@ -77,7 +77,7 @@ npm run dev      # http://localhost:5173
 
 ```text
 portfolio-web-app/
-├── .github/workflows/     CI and dependency review
+├── .github/               Workflows (CI, dependency review, secret scan) and Dependabot settings
 ├── docs/screenshots/      Images used in this README
 ├── public/                Files served as-is: skill icons, company logos, project screenshots
 ├── src/
@@ -112,29 +112,18 @@ Every pull request to `main`, and every push to `main`, runs the [CI workflow](.
 4. `npm audit --omit=dev`, which fails on any known vulnerability in the site's runtime dependencies
 5. `npm audit`, a full report that stays informational while the development tooling is upgraded
 
-Pull requests also go through [dependency review](.github/workflows/dependency-review.yml), which blocks any new runtime dependency with a known vulnerability. Both workflows run with a read-only token and use actions pinned to full commit SHAs.
+Two more checks guard `main`:
+
+- [Dependency review](.github/workflows/dependency-review.yml) blocks a pull request that adds a runtime dependency with a known vulnerability.
+- The [secret scan](.github/workflows/secret-scan.yml) runs gitleaks over the whole Git history on every pull request and push, without ever printing a secret in the log.
+
+All workflows run with a read-only token and use actions pinned to full commit SHAs. Every Monday, [Dependabot](.github/dependabot.yml) opens grouped pull requests for minor and patch updates of npm packages and GitHub Actions; major upgrades are planned by hand.
 
 ## Deployment
 
 The site is fully static. Netlify builds and publishes `main` automatically at **[imarioa.netlify.app](https://imarioa.netlify.app/)**.
 
 A move to Cloudflare Workers, with a preview address for every branch, is planned; this section will describe it once it is live.
-
-## Roadmap
-
-- [x] Restore the production build and update dependencies within their major versions
-- [x] Pin Node.js 24
-- [ ] Run lint, type-check, build and audits on every pull request
-- [ ] End-to-end tests with Playwright
-- [ ] Move to Vite 8, ESLint 10 and TypeScript 6
-- [ ] Shorter preloader and lighter animations, with content visible without JavaScript
-- [ ] Search engine optimization: pre-rendered HTML, metadata, optimized images
-- [ ] English version under `/en/`
-- [ ] Hosting on Cloudflare Workers
-
-## License
-
-No open-source license has been chosen yet, so the code is © Elie Imario, all rights reserved. Texts, photos, illustrations and project screenshots are not available for reuse.
 
 ## Contact
 
