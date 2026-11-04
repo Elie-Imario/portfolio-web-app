@@ -24,6 +24,9 @@ updates:
       # Held until the Vite 8 upgrade: newer releases pull in @parcel/watcher.
       - dependency-name: sass
         versions: [">=1.73.0"]
+      # 0.5 requires ESLint 9 or 10; it comes with the ESLint 10 upgrade.
+      - dependency-name: eslint-plugin-react-refresh
+        versions: [">=0.5.0"]
     commit-message:
       prefix: chore
       include: scope
